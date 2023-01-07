@@ -1,0 +1,20 @@
+:root{
+    /*font family*/
+--body-font-family:'Poppins', sans-serif;
+/*colors*/
+--hue:45;
+--sat:98%;
+--first-color:hsl(--hue,--sat,60%);
+--first-color-light:hsl(--hue,--sat,85%);
+--first-color-lighten:hsl(--hue,--sat,80%);
+--first-color-alt:hsl(--hue,--sat,53%);
+--title-color:hsl(--hue,4%,15%);
+--text-color:hsl(--hue,4%,35%);
+--text-color-light:hsl(--hue,4%,65%);
+--body-color:hsl(--hue,0%,100%);
+--container-color:#FFF;
+--scroll-bar-color:hsl(--hue,4%,85%);
+--scroll-thumb-color:hsl(--hue,4%,75%);
+--main_color:#fdcb35;
+--scroll-color:white;
+}

@@ -1,0 +1,119 @@
+@use 'mixin.scss';
+.section{
+    padding: 4.5rem 0 1rem;
+    color: var(--title-color);
+}
+.svg{
+    fill: var(--main_color);;
+    &__color{
+        fill: var(--main_color);
+    }
+    &__blob{
+        fill: var(--main_color);
+    }
+    &__img{
+        width: 300px;
+        justify-self: center;
+    }
+}
+.container{
+    width: 80%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 0 15px;
+    margin: auto;
+    @media (max-width:767px){
+            width:90%;
+            // padding:0;
+            height:90%;
+            // background: rebeccapurple;
+    }
+}
+.grid{
+    display: grid;
+    gap: 1.5rem;
+}
+%container_flex{
+    @include mixin.display_flex(center,center,row);
+    @media (max-width:767px){
+        @include mixin.display_flex(flex-start,center,column);
+    }
+}
+%left{
+    width: 49%;
+    height: 100%;
+    @include mixin.display_flex(center,flex-start,column);
+    .h1{
+        width: 70%;
+        font: {
+            size:50px;
+            weight:700;
+        }
+        color:var(--text-color);
+    }
+    p{
+        width: 55%;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        color: #636363;
+        font: {
+            size: 17px;
+            weight:400;
+        }
+    }
+    button{
+        @include mixin.circle(24%,9%,25px);
+        border: none;
+        background-color:var(--main_color);
+        @include mixin.display_flex(center,center,row);
+        margin-top: 15px;
+        font: {
+            size: 20px;
+            weight:700;
+        } 
+        color:var(--text-color);
+        cursor: pointer;
+    }
+    @media (max-width:767px){
+            width: 100%;
+            height: 50%;
+            padding: 0;
+           .h1{
+                width: 100%;
+                // background: red;
+                font: {
+                     size:22px;
+                     weight:bold;   
+                }
+           }
+           p{
+            width: 100%;
+            font: {
+                size: 15px;
+                weight:400;
+            }
+           }
+           button{
+              @include mixin.circle(50%,15%,25px);
+            }
+    }
+}
+%right{
+    width: 49%;
+    height: 100%;
+    img{
+        width: 100%;
+        height: 100%;
+        transform: rotatey(180deg);
+    }
+    @media (max-width:767px){
+        width: 100%;
+        height: 50%;
+    }
+}
+%div_style{
+    width: 30%;
+    height: 40%;
+    box-sizing: border-box;
+    padding: 10px;
+}

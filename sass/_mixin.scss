@@ -1,0 +1,11 @@
+@mixin display_flex($content,$align,$dir){
+    display: flex;
+    justify-content: $content;
+    align-items: $align;
+    flex-direction: $dir;
+}
+@mixin circle($directions_width,$directions_height,$border) {
+    border-radius: $border;
+    width: $directions_width;
+    height: $directions_height;
+}
